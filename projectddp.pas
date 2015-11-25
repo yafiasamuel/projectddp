@@ -1,4 +1,4 @@
-program bwehhh;
+program projectddp;
 uses crt;
 var a,b,c : integer;
 user,pass : string;
