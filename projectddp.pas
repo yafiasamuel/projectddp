@@ -1,4 +1,4 @@
-program ole;
+program bwehhh;
 uses crt;
 var a,b,c : integer;
 user,pass : string;
