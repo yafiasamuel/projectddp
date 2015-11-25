@@ -1,4 +1,4 @@
-program projectddp;
+program oasd;
 uses crt;
 var a,b,c : integer;
 user,pass : string;
