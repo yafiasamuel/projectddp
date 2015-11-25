@@ -1,3 +1,4 @@
+program ole;
 uses crt;
 var a,b,c : integer;
 user,pass : string;
