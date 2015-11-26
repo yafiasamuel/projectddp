@@ -1,8 +1,25 @@
-program projectddp;
+program oasd;
 uses crt;
 var a,b,c : integer;
 user,pass : string;
-label fti;
+
+procedure loading;
+var titikloading: integer;
+begin
+        titikloading := 15;
+        for a:=1 to 50 do
+        begin
+                gotoxy(38,15);
+                write(a*2,'%');
+                delay(50);
+                gotoxy(titikloading,17);
+                write(#177);
+                titikloading:= titikloading+1;
+
+        end;
+        delay(500);
+
+end;
 
 
 
@@ -103,7 +120,7 @@ begin
         clrscr;
         username;
         password;
-
+        loading;
         clrscr;
 repeat;
         for a:=1 to 34 do
@@ -153,4 +170,5 @@ f;t;i;u;k;s;w;
 
 readkey; readln;
 end.
+
 
