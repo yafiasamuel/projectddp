@@ -4,22 +4,6 @@ var a,b,c : integer;
 user,pass : string;
 label ftiuksw;
 
-procedure loading;
-var titikloading:integer;
-begin
-        titikloading :=15;
-        for a:=1 to 50 do
-        begin
-                gotoxy(38,17);
-                write(a*2,'%');
-                delay(50);
-                gotoxy(titikloading,19);
-                write(#177);
-                titikloading:= titikloading+1;
-        end;
-        delay(500);
-end;
-
 procedure username;
 begin
 textcolor(white);
@@ -47,6 +31,54 @@ begin
                 password;
         end;
 end;
+
+procedure loading;
+var titikloading:integer;
+begin
+        titikloading :=15;
+        for a:=1 to 50 do
+        begin
+                gotoxy(38,17);
+                write(a*2,'%');
+                delay(50);
+                gotoxy(titikloading,19);
+                write(#177);
+                titikloading:= titikloading+1;
+        end;
+        delay(500);
+end;
+
+procedure login;
+begin
+        for a:=25 to 50 do
+        begin
+                gotoxy(a,10);
+                textcolor(a);
+                delay(100);
+                write(#177);
+        end;
+        for a:=25 to 50 do
+        begin
+                gotoxy(a,15);
+                textcolor(a);
+                delay(100);
+                write(#177);
+        end;
+        for a:=11 to 14 do
+        begin
+                textcolor(a);
+                delay(100);
+                gotoxy(25,a);
+                write(#18);
+                gotoxy(50,a);
+                write(#18);
+        end;
+
+        username;
+        password;
+end;
+
+
 
 
 PROCEDURE f;
@@ -112,35 +144,22 @@ gotoxy(65,18);writeln('* * *');   delay(200);
 gotoxy(65,19);writeln('** **'); delay(200);
 end;
 
+procedure pftiuksw;
+begin
+        f;
+        t;
+        i;
+        u;
+        k;
+        s;
+        w;
+end;
+
 begin
         clrscr;
-        for a:=25 to 50 do
-        begin
-                gotoxy(a,10);
-                textcolor(a);
-                delay(100);
-                write(#177);
-        end;
-        for a:=25 to 50 do
-        begin
-                gotoxy(a,15);
-                textcolor(a);
-                delay(100);
-                write(#177);
-        end;
-        for a:=11 to 14 do
-        begin
-                textcolor(a);
-                delay(100);
-                gotoxy(25,a);
-                write(#18);
-                gotoxy(50,a);
-                write(#18);
-        end;
 
-        username;
-        password;
-        loading;
+        login;
+
         clrscr;
 
         for a:=1 to 34 do
@@ -183,13 +202,15 @@ begin
                 writeln('FAKULTAS TEKNOLOGI INFORMASI - UKSW - SALATIGA',' ');
                 gotoxy(b-1,7);
                 writeln('SEMESTER GASAL 2015-2016',' ');
+                if keypressed then
+                        goto ftiuksw;
 
 
         end;
 
 ftiuksw:
 clrscr;
-f;t;i;u;k;s;w;
+pftiuksw;
 
-readkey;
+readln;
 end.
