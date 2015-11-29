@@ -150,7 +150,7 @@ begin
         clrscr;
 
         login;
-
+        loading;
         clrscr;
 
         for a:=1 to 34 do
