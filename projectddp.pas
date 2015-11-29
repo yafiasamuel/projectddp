@@ -142,7 +142,7 @@ begin
         password;
         loading;
         clrscr;
-repeat;
+
         for a:=1 to 34 do
         begin
                 gotoxy(a,1);
@@ -162,33 +162,11 @@ repeat;
                 writeln(' ','SEMESTER GASAL 2015-2016');
 
         end;
-until keypressed;
-repeat;
-for b := 35 downto 2 do
-        begin
-
-        gotoxy(b-1,1);
-                delay(200);
-                writeln('KELOMPOK 2',' ');
-                gotoxy(b-1,2);
-                writeln('YAFIA SAMUEL HALIM  - 672015112',' ');
-                gotoxy(b-1,3);
-                writeln('WIDHI PUTRA NUGRAHA - 672015118',' ');
-                gotoxy(b-1,4);
-                writeln('DASAR-DASAR PEMROGRAMAN (IT132) - KELAS F',' ');
-                gotoxy(b-1,5);
-                writeln('DOSEN : M.A. INEKE PAKERENG, M.KOM.',' ');
-                gotoxy(b-1,6);
-                writeln('FAKULTAS TEKNOLOGI INFORMASI - UKSW - SALATIGA',' ');
-                gotoxy(b-1,7);
-                writeln('SEMESTER GASAL 2015-2016',' ');
 
 
-        end;
-until keypressed;
 clrscr;
 
 f;t;i;u;k;s;w;
 
-readkey; readln;
+readkey;
 end.
