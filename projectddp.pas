@@ -1,6 +1,6 @@
 program projectddp;
 uses crt;
-var a,b,c : integer;
+var a,b : integer;
 user,pass : string;
 label ftiuksw;
 
@@ -144,16 +144,7 @@ gotoxy(65,18);writeln('* * *');   delay(200);
 gotoxy(65,19);writeln('** **'); delay(200);
 end;
 
-procedure pftiuksw;
-begin
-        f;
-        t;
-        i;
-        u;
-        k;
-        s;
-        w;
-end;
+
 
 begin
         clrscr;
@@ -210,7 +201,7 @@ begin
 
 ftiuksw:
 clrscr;
-pftiuksw;
+f;t;i;u;k;s;w;
 
-readln;
+readkey;readln;
 end.
