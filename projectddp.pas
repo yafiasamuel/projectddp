@@ -149,34 +149,34 @@ end;
 
 
 procedure penutup;
-var x,y : integer;
+var j,k : integer;
 begin
-x := 1;
-y := 80;
-textbackground(black);
+j := 1;
+k := 80;
+
 clrscr;
 gotoxy(1,15);
 for a:=1 to 25 do
         begin
                 textcolor(a);
-                gotoxy(x,12);
+                gotoxy(j,12);
                 write('>');   write('          CREATED BY');
-                gotoxy(x,13);
+                gotoxy(j,13);
                 write('>');   write('        YAFIA AND WIDY');
-                gotoxy(x,14);
+                gotoxy(j,14);
                 write('>');   write('           FTI 2015');
-                gotoxy(x,15);
+                gotoxy(j,15);
                 write('>');
-                gotoxy(y,12);
+                gotoxy(k,12);
                 write('<');
-                gotoxy(y,13);
+                gotoxy(k,13);
                 write('<');
-                gotoxy(y,14);
+                gotoxy(k,14);
                 write('<');
-                gotoxy(y,15);
+                gotoxy(k,15);
                 write('<');
-                x:=x+1;
-                y:=y-1;
+                j:=j+1;
+                k:=k-1;
                 delay(50);
         end;
         readkey
