@@ -156,7 +156,7 @@ begin
         for a:=1 to 34 do
         begin
                 gotoxy(a,1);
-                delay(200);
+                delay(100);
                 writeln(' ','KELOMPOK 2');
                 gotoxy(a,2);
                 writeln(' ','YAFIA SAMUEL HALIM  - 672015112');
@@ -179,7 +179,7 @@ begin
         begin
 
         gotoxy(b-1,1);
-                delay(200);
+                delay(100);
                 writeln('KELOMPOK 2',' ');
                 gotoxy(b-1,2);
                 writeln('YAFIA SAMUEL HALIM  - 672015112',' ');
@@ -199,9 +199,14 @@ begin
 
         end;
 
+
 ftiuksw:
+textbackground(white);
 clrscr;
-f;t;i;u;k;s;w;
+textcolor(blue);
+f;t;i;
+textcolor(yellow);
+u;k;s;w;
 
 readkey;readln;
 end.
