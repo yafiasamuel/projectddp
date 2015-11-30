@@ -36,6 +36,7 @@ procedure loading;
 var titikloading:integer;
 begin
         titikloading :=15;
+        textcolor(green);
         for a:=1 to 50 do
         begin
                 gotoxy(38,17);
@@ -83,20 +84,21 @@ end;
 
 PROCEDURE f;
 begin
+
 gotoxy(20,7);  writeln('*****'); delay(200);
-gotoxy(20,8);  writeln('*    '); delay(200);
+gotoxy(20,8);  writeln('* '); delay(200);
 gotoxy(20,9);  writeln('*****'); delay(200);
-gotoxy(20,10); writeln('*    '); delay (200);
-gotoxy(20,11); writeln('*'    ); delay (200);
+gotoxy(20,10); writeln('* '); delay (200);
+gotoxy(20,11); writeln('* '); delay (200);
 end;
 
 procedure t;
 begin
 gotoxy(38,3); writeln('*****'); delay(200);
-gotoxy(38,4); writeln('  *'); delay(200);
-gotoxy(38,5); writeln('  *'); delay(200);
-gotoxy(38,6); writeln('  *'); delay(200);
-gotoxy(38,7); writeln('  *'); delay(200);
+gotoxy(38,4); writeln('  *  '); delay(200);
+gotoxy(38,5); writeln('  *  '); delay(200);
+gotoxy(38,6); writeln('  *  '); delay(200);
+gotoxy(38,7); writeln('  *  '); delay(200);
 end;
 
 procedure i;
@@ -110,26 +112,26 @@ end;
 
 procedure u;
 begin
-gotoxy(15,15);writeln('*   *'); delay(200);
-gotoxy(15,16);writeln('*   *'); delay(200);
-gotoxy(15,17);writeln('*   *'); delay(200);
-gotoxy(15,18);writeln('*   *'); delay(200);
-gotoxy(15,19);writeln('*****'); delay(200);
+gotoxy(15,15);writeln(' *   * '); delay(200);
+gotoxy(15,16);writeln(' *   * '); delay(200);
+gotoxy(15,17);writeln(' *   * '); delay(200);
+gotoxy(15,18);writeln(' *   * '); delay(200);
+gotoxy(15,19);writeln(' ***** '); delay(200);
 end;
 
 procedure k;
 begin
 gotoxy(30,20);writeln('*   *'); delay(200);
-gotoxy(30,21);writeln('* *  '); delay(200);
-gotoxy(30,22);writeln('***  '); delay(200);
-gotoxy(30,23);writeln('* *  '); delay(200);
+gotoxy(30,21);writeln('* * '); delay(200);
+gotoxy(30,22);writeln('*** '); delay(200);
+gotoxy(30,23);writeln('* * '); delay(200);
 gotoxy(30,24);writeln('*   *'); delay(200);
 end;
 
 procedure s;
 begin
 gotoxy(50,20);writeln('*****'); delay(200);
-gotoxy(50,21);writeln('*    '); delay(200);
+gotoxy(50,21);writeln('* '); delay(200);
 gotoxy(50,22);writeln('*****'); delay(200);
 gotoxy(50,23);writeln('    *'); delay(200);
 gotoxy(50,24);writeln('*****'); delay(200);
@@ -142,20 +144,57 @@ gotoxy(65,16);writeln('*   *');   delay(200);
 gotoxy(65,17);writeln('*   *');   delay(200);
 gotoxy(65,18);writeln('* * *');   delay(200);
 gotoxy(65,19);writeln('** **'); delay(200);
+
+end;
+
+
+procedure penutup;
+var x,y : integer;
+begin
+x := 1;
+y := 80;
+textbackground(black);
+clrscr;
+gotoxy(1,15);
+for a:=1 to 25 do
+        begin
+                textcolor(a);
+                gotoxy(x,12);
+                write('>');   write('          CREATED BY');
+                gotoxy(x,13);
+                write('>');   write('        YAFIA AND WIDY');
+                gotoxy(x,14);
+                write('>');   write('           FTI 2015');
+                gotoxy(x,15);
+                write('>');
+                gotoxy(y,12);
+                write('<');
+                gotoxy(y,13);
+                write('<');
+                gotoxy(y,14);
+                write('<');
+                gotoxy(y,15);
+                write('<');
+                x:=x+1;
+                y:=y-1;
+                delay(50);
+        end;
+        readkey
 end;
 
 
 
 begin
         clrscr;
-
+        cursoroff;
         login;
         loading;
         clrscr;
-
+        textcolor(yellow);
         for a:=1 to 34 do
         begin
                 gotoxy(a,1);
+
                 delay(100);
                 writeln(' ','KELOMPOK 2');
                 gotoxy(a,2);
@@ -200,13 +239,18 @@ begin
         end;
 
 
-ftiuksw:
-textbackground(white);
-clrscr;
-textcolor(blue);
-f;t;i;
-textcolor(yellow);
-u;k;s;w;
+        ftiuksw:
 
-readkey;readln;
+        clrscr;
+        textcolor(blue);
+        f;t;i;
+        textcolor(yellow);
+        u;k;s;w;readln;
+
+        clrscr;
+
+        penutup;
+
+
+
 end.
