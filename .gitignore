@@ -1,8 +1,13 @@
 # Object file
 *.o
+.gitignore~
 
 # Ada Library Information
 *.ali
 *.exe
 *.err
 *.o
+*.pas~
+*.bak
+*.out
+*.un~
